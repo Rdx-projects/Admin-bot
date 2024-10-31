@@ -1,11 +1,11 @@
 module.exports.config = {
-  name: "biryani",
+  name: "samosa", // Changed from "biryani" to "samosa"
   version: "1.0.0",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-  description: "Random joke image",
+  description: "Random samosa image", // Updated description
   commandCategory: "Image",
-  usages: "biryani",
+  usages: "samosa", // Updated usage
   cooldowns: 5,
   dependencies: {
     "request": "",
@@ -19,13 +19,13 @@ module.exports.run = async ({ api, event, args, Users, Threads, Currencies }) =>
   const request = global.nodemodule["request"];
   const fs = global.nodemodule["fs-extra"];
   
-  var link = ["https://i.postimg.cc/YSmsMSHB/e8bc70d7725684b7c3f118263987a250.jpg", "https://i.postimg.cc/s2D546T6/0e12379ed98a57f02111c3a9ede4381c.jpg", "https://i.postimg.cc/wBGRc6yM/410185dfced2b573b173a09072816713.jpg", "https://i.postimg.cc/VNp50Dpb/90025c11bd03df63c929922c7e2ad633.jpg", "https://i.postimg.cc/LsY8Sj54/c095e631fd55efd54b821efbc89f640f.jpg", "https://i.postimg.cc/mkb4P9LH/5011ebd171cd5158d8a2f1f5f8f527e2.jpg", "https://i.postimg.cc/vHTRCbcb/a5c6925133d445fef8d8174299609485.jpg", "https://i.postimg.cc/PxS3MvbZ/c848eb1ddfde9eefb9827d48ff68599f.jpg", "https://i.postimg.cc/0yGCfJPQ/a28eaa5162abe55f8c109d327acd7fb0.jpg", "https://i.postimg.cc/xCBs7D7T/6c084dc16a3a948447627c3844745c26-1.jpg"];
+  var link = ["https://i.postimg.cc/BQkc59ym/a89aa57e7b91c725708482abed87c1cf.jpg", "https://i.postimg.cc/6QwZz9hf/d2e19e4f86ed65d1c53731226a8a25a7.jpg", "https://i.postimg.cc/Vk9rJxcr/120edd3b880f0753962a56f7b5c01d1d.jpg", "https://i.postimg.cc/QVGCtb4J/b0fabd4c29ac8e499b64dc2990b2c78a.jpg", "https://i.postimg.cc/YS9WTdJv/7c1e0f89d45343a1cf764ce8ac8a10a8.jpg", "https://i.postimg.cc/zvnbT6Rc/018944cacf0bd71083fb8786897aaf2f.jpg", "https://i.postimg.cc/3J1W7gjm/9b139719f15cf31bc88352e81c0985c8.jpg", "https://i.postimg.cc/vB5HK9H1/84fa279dc94301c9bb6d627eb6d612e4.jpg"];
 
   // React with 🤤 emoji
   api.setMessageReaction("🤤", event.messageID, (err) => {}, true);
 
   // Send the initial message
-  api.sendMessage("𝗔𝗖𝗛𝗔 𝗚 𝗟𝗚𝗧𝗔 𝗕𝗛𝗢𝗢𝗞 𝗟𝗚 𝗚𝗔𝗘𝗬 𝗛𝗬 𝗝𝗡𝗔𝗕 𝗞𝗢 𝗗𝗘𝗧𝗔 𝗛𝗨 𝗕𝗜𝗥𝗬𝗔𝗡𝗜", event.threadID, () => {
+  api.sendMessage("𝗔𝗖𝗛𝗔 𝗚 𝗟𝗚𝗧𝗔 𝗕𝗛𝗢𝗢𝗞 𝗟𝗚 𝗚𝗔𝗘𝗬 𝗛𝗬 𝗝𝗡𝗔𝗕 𝗞𝗢 𝗗𝗘𝗧𝗔 𝗛𝗨 𝗦𝗔𝗠𝗢𝗦𝗔", event.threadID, () => {
     // Once the initial message is sent, proceed to send the image
     var callback = () => api.sendMessage(
       { body: `MADE BY ZAIN PRINCE: ${link.length}`, attachment: fs.createReadStream(__dirname + "/cache/1.jpg") },
